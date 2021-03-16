@@ -67,7 +67,12 @@ def center_to_edge(center):
     elif len(center.shape) == 2:
         edge = np.empty([center.shape[0] + 1, center.shape[1] + 1])
         edge.fill(np.nan)
-        edge[1:-1, 1:-1] = (center[1:, 1:] + center[1:, :-1] + center[:-1, 1:] + center[:-1, :-1]) / 4.0
+        edge[1:-1, 1:-1] = (
+            center[1:, 1:]
+            + center[1:, :-1]
+            + center[:-1, 1:]
+            + center[:-1, :-1]
+        ) / 4.0
         edge[0, :] = 2 * edge[1, :] - edge[2, :]
         edge[-1, :] = 2 * edge[-2, :] - edge[-3, :]
         edge[:, 0] = 2 * edge[:, 1] - edge[:, 2]
