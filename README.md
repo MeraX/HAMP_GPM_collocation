@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/348316876.svg)](https://zenodo.org/badge/latestdoi/348316876)
+
 # Investigate HAMP - GPM collocations
 
 This script published here provides methods for a point-to-point comparison
